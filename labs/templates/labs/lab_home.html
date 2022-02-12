@@ -6,11 +6,28 @@ Lab-Dashboard
 
 {% block content %}
 
-<form action="{% url 'lab_home' %}" method="post">
-    {% csrf_token %}
-    <label for="lname">Adhar number</label><br>
-    <input type="text" name="adhar" placeholder="Patient Adhar Number"><br>
-    <input type="submit" value="Submit">
-</form> 
+<div class="auth">
+    <div class="card">
+      <div class="auth__header text-center">
+        <a href="/">
+        </a>
+        <h3>Upload User report</h3>
+        <p>Hello Lab, Welcome Back!</p>
+      </div>
+
+     
+      <form class="form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% for field in form %}
+        <!-- Input:Text -->
+        <div class="form__field">
+            <label for="formInput#text">{{field.label}}</label>
+            {{field}}
+        </div>
+        {% endfor %}
+
+        <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+    </form>
 
 {% endblock %}

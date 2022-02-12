@@ -1,8 +1,8 @@
 from django.db import models
 import uuid
-from django.db import models
 
 class patient(models.Model):
+    role = models.CharField(max_length=10,null=True, blank=True, default="patient")
     adhar = models.IntegerField(null=False, blank=False, unique=True)
     name = models.CharField(max_length=100, null=False, blank=False)
     profile_image = models.ImageField(max_length=200,null=True, blank=True, upload_to='patients/', default="patients/user-default.png")
@@ -14,8 +14,7 @@ class patient(models.Model):
     height = models.IntegerField(null=True, blank=True)
     weight = models.IntegerField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
-    id = models.UUIDField(default=uuid.uuid4,
-                          primary_key=True, unique=True, editable=False)
+    id = models.UUIDField(default=uuid.uuid4,primary_key=True, unique=True, editable=False)
 
     def __str__(self):
         return self.name
