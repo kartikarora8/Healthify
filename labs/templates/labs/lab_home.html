@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block title %}
+Lab-Dashboard
+{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'lab_home' %}" method="post">
+    {% csrf_token %}
+    <label for="lname">Adhar number</label><br>
+    <input type="text" name="adhar" placeholder="Patient Adhar Number"><br>
+    <input type="submit" value="Submit">
+</form> 
+
+{% endblock %}
