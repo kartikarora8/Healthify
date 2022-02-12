@@ -1,0 +1,75 @@
+body{
+   
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+.container1
+{
+    background-color: #2d2d39;
+}
+
+.heading
+{
+    color: #D3DEDC;
+    font-size: 4rem;
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 170px;
+}
+.doctor-img
+{
+    width:450px;
+    z-index: 1;
+    margin-top: 50px;
+    margin-left: 100px;
+    padding-bottom: 0px;
+    position: absolute;
+   
+}
+.doctor-icon
+{
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+.box
+{
+    text-align: center;
+}
+.box:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+.doctor2
+{
+    width:500px;
+    margin-top: 100px;
+    margin-left: 100px;
+    position: relative;
+    
+}
+.chat
+{
+    width: 100px;
+    
+   
+    margin-top: 100px;
+    position:absolute;
+    z-index: 1;
+}
+.container3
+{
+    margin-bottom: 50px;
+}
+.container4
+{
+    background-color: #2d2d39;
+}
+
+.btns
+{
+    border-radius: 50px;
+}
+
