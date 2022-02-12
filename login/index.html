@@ -1,72 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
 
     <title>Document</title>
-</head>
-<body>
-  <div class="login-wrap">
-    <div class="login-html">
-      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-      <div class="login-form">
-        <div class="sign-in-htm">
-          <div class="group">
-            <label for="user" class="label">Phone Number</label>
-            <input id="user" type="phone number" class="input" required>
+  </head>
+  <body>
+    <div class="login-wrap">
+      <div class="login-html">
+        <input
+          id="tab-1"
+          type="radio"
+          name="tab"
+          class="sign-in"
+          checked
+        /><label for="tab-1" class="tab">Sign In</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up" /><label
+          for="tab-2"
+          class="tab"
+          >Sign Up</label
+        >
+        <div class="login-form">
+          <div class="sign-in-htm">
+            <div class="group">
+              <label for="user" class="label">Phone Number</label>
+              <input id="user" type="phone number" class="input" required />
+            </div>
+            <div class="group">
+              <label for="pass" class="label">Password</label>
+              <input
+                id="pass"
+                type="password"
+                class="input"
+                data-type="password"
+                required
+              />
+            </div>
+            <div class="group">
+              <input id="check" type="checkbox" class="check" checked />
+              <label for="check"
+                ><span class="icon"></span> Keep me Signed in</label
+              >
+            </div>
+            <div class="group">
+              <input type="submit" class="btn" value="Sign In" />
+            </div>
+            <div class="hr"></div>
+            <div class="foot-lnk">
+              <a href="#forgot">Forgot Password?</a>
+            </div>
           </div>
-          <div class="group">
-            <label for="pass" class="label">Password</label>
-            <input id="pass" type="password" class="input" data-type="password" required>
-          </div>
-          <div class="group">
-            <input id="check" type="checkbox" class="check" checked>
-            <label for="check"><span class="icon"></span> Keep me Signed in</label>
-          </div>
-          <div class="group">
-            <input type="submit" class="button" value="Sign In">
-          </div>
-          <div class="hr"></div>
-          <div class="foot-lnk">
-            <a href="#forgot">Forgot Password?</a>
-          </div>
-        </div>
-        <div class="sign-up-htm">
-          
+          <div class="sign-up-htm">
+            <ul style="list-style-type: none">
+              <li>
+                <div class="group" style="padding-top: 50px">
+                  <input id="doctor" type="submit" class="btn" value="Doctor" />
+                </div>
+              </li>
 
-          <ul style="list-style-type: none;">
-         <li> <div class="group" style="padding-top:50px;">
-          <input id="doctor" type="submit" class="button" value="Doctor" >
-        </div><li> 
-         <li> <div class="group" style="padding-top:20px;">
-          <input id = "patient" type="submit" class="button" value="Patient">
-        </div></li> 
-          </ul>
-        
+              <li></li>
+              <li>
+                <div class="group" style="padding-top: 20px">
+                  <input
+                    id="patient"
+                    type="submit"
+                    class="btn"
+                    value="Patient"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        
       </div>
     </div>
-  </div>
+  </body>
+  <script type="text/javascript">
+    let doctor = document.getElementById("doctor");
+    let patient = document.getElementById("patient");
 
-      
-</body>
-<script type="text/javascript">
-  let doctor = document.getElementById('doctor')
-  let patient = document.getElementById('patient')
-
-doctor.onclick = function()
-{
-    location.href = "signup-doc.html"
-}
-patient.onclick = function()
-{
-    location.href = "signup-patient.html"
-}
-</script>
+    doctor.onclick = function () {
+      location.href = "signup-doc.html";
+    };
+    patient.onclick = function () {
+      location.href = "signup-patient.html";
+    };
+  </script>
 </html>
