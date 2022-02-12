@@ -1,15 +1,16 @@
 from django.shortcuts import redirect, render
 from patient.models import patient
+from .forms import ReportForm
 
 def lab_home(request):
+    form = ReportForm()
     if request.method == 'POST':
-        user = request.POST.get('adhar')
-        return redirect('search_patient', pk=user)
-    return render(request, 'labs/lab_home.html')
+        form = ReportForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('lab_home')
+    return render(request, 'labs/lab_home.html', {"form" : form})
 
-def search_patient(request, pk):
-    user_profile = patient.objects.get(adhar=pk)
-    print(user_profile)
-    return render(request, 'labs/search_patient.html', {'user_profile' : user_profile})
+
 
 

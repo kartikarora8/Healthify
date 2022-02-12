@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+
+{% block titel %}
+Blog Section
+{% endblock %}
+
+{% block content %}
+
+<main class="Blogs">
+    <section class="hero-section text-center">
+      <div class="container container--narrow">
+        <div class="hero-section__box">
+          <h2>Find freshly brewed <span>Blogs</span></h2>
+        </div>
+      </div>
+    </section>
+    <section class="BlogsList">
+      <div class="container">
+        <div class="grid grid--three">
+            {% for blog in blogs %}
+            <div class="column">
+            <div class="card project">
+              <a href="{% url 'single_blog' blog.id %}" class="project">
+                <img
+                  class="project__thumbnail"
+                  src="{{blog.image.url}}"
+                  alt="blog thumbnail"
+                />
+                <div class="card__body">
+                  <h3 class="project__title">
+                    {{blog.title}}
+                  </h3>
+                  <p>
+                    <a class="project__author" href="#"
+                      >By {{blog.writer}}</a
+                    >
+                  </p>
+                  <p class="project--rating">{{blog.content|slice:"150"}}....<a href="#">read more</a></p>
+                  <div class="project__tags">
+                    {% for tag in blog.tags.all %}
+                    <span class="tag tag--pill tag--main">
+                        <small>{{tag}}</small>
+                    </span>
+                    {% endfor %}
+
+                </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </main>
+
+{% endblock %}
