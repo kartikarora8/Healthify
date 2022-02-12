@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="steps.css">
     <link rel="stylesheet" href="uikit.css" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="healthcard.css">
@@ -88,16 +89,90 @@
             </div>
     </main>
 
-    <div class="steps">
+    <div class="InfoCont">
+        <div class="steps">
 
+            <h2 class="StepHead">Weekly Step Comparison</h2>
+    
+            <p class="stepDays">Monday</p>
+            <div class="containerr">
+              <div class="skills Monday"><span class="stepStat">5400</span></div>
+            </div>
+            
+            <p class="stepDays">Tuesday</p>
+            <div class="containerr">
+              <div class="skills Tuesday"><span class="stepStat">3600</span></div>
+            </div>
+            
+            <p class="stepDays">Wednesday</p>
+            <div class="containerr">
+              <div class="skills Wednesday"><span class="stepStat">4400</span></div>
+            </div>
+            
+            <p class="stepDays">Thursday</p>
+            <div class="containerr">
+              <div class="skills Thursday"><span class="stepStat">6100</span></div>
+            </div>
+            
+            <p class="stepDays">Friday</p>
+            <div class="containerr">
+              <div class="skills Friday"><span class="stepStat">4600</span></div>
+            </div>
+            
+            <p class="stepDays">Saturday</p>
+            <div class="containerr">
+              <div class="skills Saturday"><span class="stepStat">2300</span></div>
+            </div>
+            
+            <p class="stepDays">Sunday</p>
+            <div class="containerr">
+              <div class="skills Sunday"><span class="stepStat">3900</span></div>
+            </div>
+            
+            
+    
+        </div>
+    
+        <div class="heart-rate">
+            <div id="curve_chart" ></div>
+        </div>
     </div>
-
-    <div class="heart-rate">
-
-    </div>
-
-
-
+    
 </body>
+  
+   
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'User HR', 'Average'],
+          ['Mon',  81,      72],
+          ['Tues',  75,      72],
+          ['Wed',  77,       72],
+          ['Thur',  78,      72],
+          ['Fri',  68,      72],
+          ['Sat',  81,      72],
+          ['Sun',  73,      72],
+        ]);
+
+        var options = {
+          title: 'Heart Rate',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script src="styles/steps.js"></script>
+
+
 
 </html>

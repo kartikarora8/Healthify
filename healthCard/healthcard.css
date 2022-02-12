@@ -14,18 +14,26 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.InfoCont{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
 .steps
 {
+    background-image: linear-gradient(#ebf4f5,#b5c6e0);
+    padding: 20px 20px 20px 20px;
     margin-left: 150px;
     margin-bottom: 50px;
     width: 600px;
-    height:300px;
+    /* height:300px; */
     border: 1px solid black;
 }
 
 .heart-rate
 {
-    margin-top: -350px;
+    /* margin-top: -650px; */
     margin-bottom: 50px;
     margin-right: 50px;
     width: 600px;
