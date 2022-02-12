@@ -1,0 +1,39 @@
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.containerr {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.StepHead{
+  color: black;
+}
+
+.stepDays{
+  color: black;
+  font-weight: 600;
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: rgb(0, 0, 0); /* White text color */
+}
+
+.stepStat{
+  margin-right: 20px;
+  color: rgb(0, 0, 0); /* White text color */
+  font-weight: 600;
+}
+
+.Monday {width: 54%; background-color: rgba(255, 0, 64, 0.156);} /* Green */
+.Tuesday {width: 36%; background-color: rgba(33, 150, 243, 0.36);} /* Blue */
+.Wednesday {width: 44%; background-color: rgba(117, 1, 194, 0.44);} /* Red */
+.Thursday {width: 61%; background-color: rgba(172, 181, 4, 0.61);} /* Dark Grey */
+.Friday {width: 46%; background-color: rgba(243, 33, 187, 0.46);} /* Dark Grey */
+.Saturday {width: 23%; background-color: rgba(0, 140, 63, 0.23);} /* Dark Grey */
+.Sunday {width: 39%; background-color: rgba(216, 98, 2, 0.39);} /* Dark Grey */
+
+
