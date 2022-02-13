@@ -6,6 +6,9 @@
 
 https://drive.google.com/drive/folders/1vVDkwwY90omsggJ4AwQjbEtI3oyy3m6P
 
+##### Youtube Video
+
+https://youtu.be/jUek6LGziq0
 
 ## Setup
 
