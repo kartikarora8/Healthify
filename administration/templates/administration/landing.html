@@ -109,8 +109,8 @@
 
                 </ul>
 
-                <button class="  btn btn-outline-light mx-3 my-sm-0" type="submit" style="border-radius: 40px;"><a href="{% url 'registration_choice' %}">Reigter</a></button>
-                <button class="  btn btn-outline-light mx-3 my-sm-0" type="submit" style="border-radius: 40px;"><a href="{% url 'login_choice' %}">LogIn</a></button>
+                <a href="{% url 'registration_choice' %}"><button class="  btn btn-outline-light mx-3 my-sm-0" type="submit" style="border-radius: 40px;">Reigter</button></a>
+                <a href="{% url 'login_choice' %}"><button class="  btn btn-outline-light mx-3 my-sm-0" type="submit" style="border-radius: 40px;">LogIn</button></a>
             </div>
         </nav>
         <div class="row">
@@ -186,5 +186,26 @@
     </div>
     
 </body>
+<script type="text/javascript"src="https://studio.alan.app/web/lib/alan_lib.min.js%22%3E"></script>
+
+<script>
+    var alanBtnInstance = alanBtn({
+      key: "2b14fb0c6fb9e2543d506a44758da2f02e956eca572e1d8b807a3e2338fdd0dc/stage",
+      onCommand: function (commandData) {
+        if (commandData.command === "doctors") {
+          location.href="/doctors/";
+        }
+        else if(commandData.command === "blog"){
+            location.href="/administration/";
+        }
+        else if(commandData.command === "home"){
+            location.href="http://127.0.0.1:5500/Healthify/templates/LandingPage/landing.html";
+        }
+        else if(commandData.command === "activity"){
+        }
+      },
+      rootEl: document.getElementById("alan-btn"),
+    });
+  </script>
 
 </html>

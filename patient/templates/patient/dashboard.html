@@ -14,6 +14,7 @@ My Profile
             <a class="tag tag--pill tag--main settings__btn" href="#"><i class="im im-edit"></i> Edit</a>
             <img class="avatar avatar--xl dev__avatar" src="{{patient.profile_image.url}}" />
             <h2 class="dev__name">{{patient.name}}</h2>
+            <p class="dev__title">Aadhar: {{patient.adhar}}</p>
             <br>
             <p class="dev__title">Age: {{patient.age}}</p>
             <p class="dev__title">DOB: {{patient.dob}}</p>
@@ -42,12 +43,14 @@ My Profile
 
         <table class="settings__table">
           <tr>
-            <td class="settings__tableInfo">
-              <img class="card cardDocDet" src="https://media.istockphoto.com/vectors/doctor-research-in-blood-sample-patient-in-test-tube-finding-a-cure-vector-id1212718715" alt="">
+            <td class="settings__tableInfo" >
+              <img class="card cardDocDet" src="{{doctor.profile_image.url}}" href="{% url 'doc_profile' doctor.id %}">
               <div>
-                <h4>DR. abcd</h4>
+                <h4>DR. {{doctor.name}}</h4>
               <p>
-                Cardiologist
+                {% for spec in doctor.special_set.all %}
+                {{spec}}
+                {% endfor %}
               </p>
               </div>
               

@@ -2,7 +2,7 @@
 
 <header class="header">
     <div class="container container--narrow">
-      <a href="#" class="header__logo">
+      <a href="{% url 'dashboard' %}" class="header__logo">
         <img src="{% static 'images/logo.png' %}" style="width:150px; height:55px;" alt="DevSearch Logo" />
       </a>
       <nav class="header__nav">
@@ -14,9 +14,9 @@
         <ul class="header__menu">
           <li class="header__menuItem"><a href="{% url 'doctors' %}">Doctors</a></li>
           <li class="header__menuItem"><a href="{% url 'blog' %}">Blogs</a></li>
-          <li class="header__menuItem"><a href="#">My Activity</a></li>
+          <li class="header__menuItem"><a href="{% url 'my_activity' %}">My Activity</a></li>
           <li class="header__menuItem"><a href="#">Inbox</a></li>
-          <li class="header__menuItem"><a href="#" class="btn btn--sub">Logout</a></li>
+          <li class="header__menuItem"><a href="{% url 'landing' %}" class="btn btn--sub">Logout</a></li>
         </ul>
       </nav>
     </div>

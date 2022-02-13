@@ -1,0 +1,269 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="steps.css">
+    <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+    <link rel="stylesheet" href="{% static "styles/app.css" %}" />
+
+
+    <title>Document</title>
+
+    <style>
+        .health-card
+        {
+            margin-top: 50px;
+            width: 675px;
+            height:400px;
+            border: 1px solid black;
+            position: absolute;
+        background-image: url(bg.png);
+        transition: 0.3s;
+        }
+
+        .health-card:hover
+        {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .InfoCont{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .steps
+        {
+            background-image: linear-gradient(#ebf4f5,#b5c6e0);
+            padding: 20px 20px 20px 20px;
+            margin-left: 150px;
+            margin-bottom: 50px;
+            width: 600px;
+            /* height:300px; */
+            border: 1px solid black;
+        }
+
+        .heart-rate
+        {
+            /* margin-top: -650px; */
+            margin-bottom: 50px;
+            margin-right: 50px;
+            width: 600px;
+            height:300px;
+            border: 1px solid black;
+            float:right;
+            
+        }
+
+        #name
+        {
+        
+        
+            margin-left: 320px;
+            padding-top: 130px;
+        
+            text-transform: uppercase;
+            
+            color: black;
+        }
+        .qr-box
+        {
+            margin-top: 100px;
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            float: left;
+            margin-left: 80px;
+            position: absolute;
+            
+        }
+        #aadhar-no
+        {
+        
+            margin-left: 320px;
+            padding-top: 10px;
+            text-transform: uppercase;
+            position: relative;
+            color: black;
+        }
+
+        * {box-sizing:border-box}
+
+        /* Container for skill bars */
+        .containerr {
+        width: 100%; /* Full width */
+        background-color: #ddd; /* Grey background */
+        }
+
+        .StepHead{
+        color: black;
+        }
+
+        .stepDays{
+        color: black;
+        font-weight: 600;
+        }
+
+        .skills {
+        text-align: right; /* Right-align text */
+        padding-top: 10px; /* Add top padding */
+        padding-bottom: 10px; /* Add bottom padding */
+        color: rgb(0, 0, 0); /* White text color */
+        }
+
+        .stepStat{
+        margin-right: 20px;
+        color: rgb(0, 0, 0); /* White text color */
+        font-weight: 600;
+        }
+
+        .Monday {width: 54%; background-color: rgba(255, 0, 64, 0.156);} /* Green */
+        .Tuesday {width: 36%; background-color: rgba(33, 150, 243, 0.36);} /* Blue */
+        .Wednesday {width: 44%; background-color: rgba(117, 1, 194, 0.44);} /* Red */
+        .Thursday {width: 61%; background-color: rgba(172, 181, 4, 0.61);} /* Dark Grey */
+        .Friday {width: 46%; background-color: rgba(243, 33, 187, 0.46);} /* Dark Grey */
+        .Saturday {width: 23%; background-color: rgba(0, 140, 63, 0.23);} /* Dark Grey */
+        .Sunday {width: 39%; background-color: rgba(216, 98, 2, 0.39);} /* Dark Grey */
+
+
+    </style>
+
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <main style="margin-left: -100px;" class="profile my-md">
+        <div class="container">
+            <div class="layout">
+                <div class="column column--1of3">
+                    <div class="card text-center">
+                        <div class="card__body dev">
+                            <img class="avatar avatar--xl" src="{{patient.profile_image.url}}" />
+                            <h2 class="dev__name">{{patient.name}}</h2>
+                            <br>
+                            <p class="dev__title">Age: {{patient.age}}</p>
+                            <p class="dev__title">DOB: {{patient.dob}}</p>
+                            <p class="dev__title">Height: {{patient.height}} cms</p>
+                            <p class="dev__title">Weight: {{patient.weight}} Kgs</p>
+                            <p class="dev__title">Blood group: A+</p>
+
+                            <br>
+                            <p class="dev__title">{{patient.email}}</p>
+                            <p class="dev__title">Phone Number: {{patient.phone_number}}</p>
+                            <br>
+                            <p class="dev__location">Based in {{patient.address}}</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column column--2of3">
+                    <div class="health-card">
+                        <div class="devInfo">
+                            <div class="qr-box">
+                                <img src="{% static 'images/extras/qr.png' %}">
+                            </div>
+                            <h3 id="name" style=" margin-right: 50px; ">  {{patient.name}}</h3>
+                           
+                            <h3 id="aadhar-no">{{patient.adhar}}</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+    </main>
+
+    <div class="InfoCont">
+        <div class="steps">
+
+            <h2 class="StepHead">Weekly Step Comparison</h2>
+    
+            <p class="stepDays">Monday</p>
+            <div class="containerr">
+              <div class="skills Monday"><span class="stepStat">5400</span></div>
+            </div>
+            
+            <p class="stepDays">Tuesday</p>
+            <div class="containerr">
+              <div class="skills Tuesday"><span class="stepStat">3600</span></div>
+            </div>
+            
+            <p class="stepDays">Wednesday</p>
+            <div class="containerr">
+              <div class="skills Wednesday"><span class="stepStat">4400</span></div>
+            </div>
+            
+            <p class="stepDays">Thursday</p>
+            <div class="containerr">
+              <div class="skills Thursday"><span class="stepStat">6100</span></div>
+            </div>
+            
+            <p class="stepDays">Friday</p>
+            <div class="containerr">
+              <div class="skills Friday"><span class="stepStat">4600</span></div>
+            </div>
+            
+            <p class="stepDays">Saturday</p>
+            <div class="containerr">
+              <div class="skills Saturday"><span class="stepStat">2300</span></div>
+            </div>
+            
+            <p class="stepDays">Sunday</p>
+            <div class="containerr">
+              <div class="skills Sunday"><span class="stepStat">3900</span></div>
+            </div>
+            
+            
+    
+        </div>
+    
+        <div class="heart-rate">
+            <div id="curve_chart" ></div>
+        </div>
+    </div>
+    
+</body>
+  
+   
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'User HR', 'Average'],
+          ['Mon',  81,      72],
+          ['Tues',  75,      72],
+          ['Wed',  77,       72],
+          ['Thur',  78,      72],
+          ['Fri',  68,      72],
+          ['Sat',  81,      72],
+          ['Sun',  73,      72],
+        ]);
+
+        var options = {
+          title: 'Heart Rate',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script src="styles/steps.js"></script>
+
+
+
+</html>
