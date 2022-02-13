@@ -63,6 +63,6 @@ When you click or ask alan about the blogs you will se a list of blogs matching 
 When you click or alan about your activity you will se the my activity section. Here you can see your health card containting a qr code. A doctor can scan your qr code to see 
 your health details which provides a fast solution for them. You can also see a tracking section in future which will tackle your daily day to day behaviour and find abnormalities in it.
 
-![plot](./ReadmeImages/Activity.png.jpeg)
+![plot](./ReadmeImages/Acitivity.png.jpeg)
 
 
