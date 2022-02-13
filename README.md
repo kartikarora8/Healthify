@@ -1,5 +1,12 @@
 # Healthify
 
+### Ideology 
+
+##### Powerpoint Presentation- Healthify
+
+https://drive.google.com/drive/folders/1vVDkwwY90omsggJ4AwQjbEtI3oyy3m6P
+
+
 ## Setup
 
 The first thing to do is to clone the repository:
@@ -67,11 +74,7 @@ your health details which provides a fast solution for them. You can also see a 
 
 
 
-# Other Resources
 
-##### Powerpoint Presentation- Healthify
-
-https://drive.google.com/drive/folders/1vVDkwwY90omsggJ4AwQjbEtI3oyy3m6P
 
 
 
