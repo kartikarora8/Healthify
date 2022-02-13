@@ -22,7 +22,7 @@ class Doctor(models.Model):
         return str(self.name)
 
     class Meta:
-        ordering = ['-votes']
+        ordering = ['-votes_ratio']
 
 class Special(models.Model):
     owner = models.ForeignKey(Doctor, on_delete=models.CASCADE, null=True, blank=True)

@@ -45,23 +45,27 @@
 </body>
 <script src="{% static 'uikit/app.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
-<script type="text/javascript"
- src="https://studio.alan.app/web/lib/alan_lib.min.js%22%3E"</script>
+
+<script type="text/javascript"src="https://studio.alan.app/web/lib/alan_lib.min.js%22%3E"></script>
+
 <script>
-  var alanBtnInstance = alanBtn({
-    key: "0e5d8b08a17c5d52ec70ca6d0355318d2e956eca572e1d8b807a3e2338fdd0dc/stage",
-    onCommand: function (commandData) {
-      if (commandData.command === "doctor") {
-        location.href="/doctors/";
-      }
-      else if(commandData.command === "blog"){
-          location.href="/administration/";
-      }
-      else if(commandData.command === "activity"){
-      }
-    },
-    rootEl: document.getElementById("alan-btn"),
-  });
-</script>
+    var alanBtnInstance = alanBtn({
+      key: "2b14fb0c6fb9e2543d506a44758da2f02e956eca572e1d8b807a3e2338fdd0dc/stage",
+      onCommand: function (commandData) {
+        if (commandData.command === "doctors") {
+          location.href="/doctors/";
+        }
+        else if(commandData.command === "blog"){
+            location.href="/administration/";
+        }
+        else if(commandData.command === "home"){
+            location.href="http://127.0.0.1:5500/Healthify/templates/LandingPage/landing.html";
+        }
+        else if(commandData.command === "activity"){
+        }
+      },
+      rootEl: document.getElementById("alan-btn"),
+    });
+  </script>
 </html>
 

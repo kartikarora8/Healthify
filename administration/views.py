@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import blogs, Tag
 
 def landing(request):
@@ -16,4 +16,13 @@ def registration_choice(request):
     return render(request, 'administration/register_choice.html')
 
 def login_choice(request):
-    return render(request, 'administration/login_choice.html')
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        if(username=="RohanMittal"):
+            return redirect('dashboard')
+        elif(username=="lalpathlab"):
+            return redirect('lab_home')
+        elif(username=="Aviral Nagpal"):
+            return redirect('self_doc')
+    return render(request, 'administration/login.html')
