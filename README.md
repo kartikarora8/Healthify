@@ -2,43 +2,11 @@
 
 ### Ideology 
 
-##### Powerpoint Presentation- Healthify
-
-https://drive.google.com/drive/folders/1vVDkwwY90omsggJ4AwQjbEtI3oyy3m6P
 
 ##### Youtube Video
 
 https://youtu.be/jUek6LGziq0
 
-## Setup
-
-The first thing to do is to clone the repository:
-
-```sh
-$ git clone https://github.com/Aviral-tech/Healthify
-$ cd healthify
-```
-
-Create a virtual environment to install dependencies in and activate it:
-
-```sh
-$ virtualenv2 --no-site-packages env
-$ source env/bin/activate
-```
-
-Then install the dependencies:
-
-```sh
-(env)$ pip install -r requirements.txt
-```
-Note the `(env)` in front of the prompt. This indicates that this terminal
-session operates in a virtual environment set up by `virtualenv2`.
-
-Once `pip` has finished downloading the dependencies:
-```sh
-(env)$ python manage.py runserver
-```
-And navigate to `http://127.0.0.1:8000/`.
 
 ## Walkthrough
 Alan assistant- We have an AI assistant to cater to your needs like logging in, searching for doctors, seeing your activity profile and much more.
