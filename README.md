@@ -2,6 +2,10 @@
 
 ### Ideology 
 
+Digitizing patient records and making them accessible to doctors via patient's aadhar number.
+People with physical constraints can easily consult the best doctors without any hassle of travelling or going out.
+Platform similar to a freelancing platform where patients can find verified doctors with best experience.
+
 
 ##### Youtube Video
 
